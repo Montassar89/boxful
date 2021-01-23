@@ -1,12 +1,12 @@
 import '../styles/tailwind.css'
-import Header from './layouts/header';
+// import Header from './layouts/header';
 import Footer from './layouts/footer';
 const MyApp = ({ Component, pageProps }) => {
 
   return (
-    
+
     <div>
-      <Header />
+      {/* <Header /> */}
       <Component {...pageProps} />
       <Footer />
     </div>
