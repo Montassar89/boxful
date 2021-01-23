@@ -7,6 +7,7 @@ import DownloadApp from './components/DownloadApp';
 import Testimonials from './components/Testimonials';
 import ContactRow from './components/ContactRow';
 
+
 export default function Home() {
   return (
     <div className="main">
