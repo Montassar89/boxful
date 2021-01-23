@@ -4,6 +4,7 @@ import Footer from './layouts/footer';
 const MyApp = ({ Component, pageProps }) => {
 
   return (
+    
     <div>
       <Header />
       <Component {...pageProps} />
