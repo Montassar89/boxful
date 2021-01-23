@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Banner from './components/banner';
+// import Banner from './components/banner';
 import Testimonials from './components/testimonials';
 import ContactRow from './components/contact';
 
 export default function Home() {
   return (
     <div className="main">
-      <Banner />
+      {/* <Banner /> */}
       <Testimonials />
       <ContactRow />
     
