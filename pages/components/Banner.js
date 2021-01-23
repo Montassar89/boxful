@@ -1,6 +1,7 @@
 import React from 'react';
 // import home from '';
 const Banner = ({ title }) => {
+	
 	return (
 		<div>
 			<div className="w-full h-screen m-0 p-0 bg-cover bg-bottom" style={{ backgroundImage: `url("https://images.unsplash.com/photo-1502921451607-29fa99d270d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80")`}}>
