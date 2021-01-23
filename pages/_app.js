@@ -1,6 +1,6 @@
 import '../styles/tailwind.css'
 // import Header from './layouts/header';
-import Footer from './layouts/footer';
+// import Footer from './layouts/footer';
 const MyApp = ({ Component, pageProps }) => {
 
   return (
@@ -8,7 +8,7 @@ const MyApp = ({ Component, pageProps }) => {
     <div>
       {/* <Header /> */}
       <Component {...pageProps} />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 
