@@ -1,11 +1,8 @@
 import React from 'react';
 
-import Banner from './components/Banner';
-import Section from './components/Section';
-import Card from './components/Card';
-import DownloadApp from './components/DownloadApp';
-import Testimonials from './components/Testimonials';
-import ContactRow from './components/ContactRow';
+import Banner from './components/banner';
+import Testimonials from './components/testimonials';
+import ContactRow from './components/contact';
 
 
 export default function Home() {
