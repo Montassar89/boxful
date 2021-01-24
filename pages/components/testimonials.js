@@ -18,7 +18,7 @@ const Testimonials = () => {
         },
     ]
     return (
-        <div className="bg-gray-100 my-20">
+        <div className="bg-gray-100 py-10 mt-20">
             <div className="container flex justify-center mx-auto pt-16">
                 <div>
                     <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-3 sm:w-4/6 w-5/6 mx-auto">Testimonials</h1>
@@ -31,35 +31,19 @@ const Testimonials = () => {
                     <h3 className="text-gray-500 text-lg text-center font-normal flex justify-center items-center font-bold">
                         <span className="text-4xl mx-2">4.8</span>
                         <div className="flex ">
-                            <a href="javascript:void(0)" className="mx-0">
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="fill-current text-green-400 stroke-2" fill="green" className="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="javascript:void(0)" className="mx-0">
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="fill-current text-green-400 stroke-2" fill="green" className="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                </div>
-                            </a>
-                            <a href="javascript:void(0)" className="mx-0">
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="fill-current text-green-400 stroke-2" fill="green" className="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                </div>
-                            </a>
 
-                            <a href="javascript:void(0)" className="mx-0">
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="fill-current text-green-400 stroke-2" fill="green" className="bi bi-star-fill" viewBox="0 0 16 16">
-                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                    </svg>
-                                </div>
-                            </a>
+
+                            {[...Array(4)].map((el, index) =>
+                                <a ley={index} href="javascript:void(0)" className="mx-0">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="fill-current text-green-400 stroke-2" fill="green" className="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            )}
+
+
                             <a href="javascript:void(0)" className="mx-0">
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" className="bi bi-star-half" viewBox="0 0 16 16">
@@ -79,48 +63,20 @@ const Testimonials = () => {
                     <div className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
                         {testimonialsItems.map((item, index) => {
 
-                        return (   <div key={index} className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 md:mb-32 sm:mb-8 xl:max-w-sm lg:w-2/5">
+                            return (<div key={index} className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 md:mb-32 sm:mb-8 xl:max-w-sm lg:w-2/5">
                                 <div className="rounded overflow-hidden shadow-md bg-white">
 
                                     <div className="px-6 mt-4">
                                         <div className="w-full flex  pt-5 pb-5">
-                                            <a href="javascript:void(0)" className="mx-1">
-                                                <div>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="fill-current text-green-400 stroke-2" fill="green" className="bi bi-star-fill" viewBox="0 0 16 16">
-                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                                    </svg>
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0)" className="mx-1">
-                                                <div>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="fill-current text-green-400 stroke-2" fill="green" className="bi bi-star-fill" viewBox="0 0 16 16">
-                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                                    </svg>
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0)" className="mx-1">
-                                                <div>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="fill-current text-green-400 stroke-2" fill="green" className="bi bi-star-fill" viewBox="0 0 16 16">
-                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                                    </svg>
-                                                </div>
-                                            </a>
-
-                                            <a href="javascript:void(0)" className="mx-1">
-                                                <div>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="fill-current text-green-400 stroke-2" fill="green" className="bi bi-star-fill" viewBox="0 0 16 16">
-                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                                    </svg>
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0)" className="mx-1">
-                                                <div>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="fill-current text-green-400 stroke-2" fill="green" className="bi bi-star-fill" viewBox="0 0 16 16">
-                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                                    </svg>
-                                                </div>
-                                            </a>
-
+                                            {[...Array(5)].map((el, index) =>
+                                                <a key={index} href="javascript:void(0)" className="mx-1">
+                                                    <div>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" className="fill-current text-green-400 stroke-2" fill="green" className="bi bi-star-fill" viewBox="0 0 16 16">
+                                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            )}
                                         </div>
                                         <p className="text-left text-black text-base pt-3 font-normal mt-4">{item.comment}</p>
                                         <p className="text-gray-500 text-sm text-left mb-8 mt-20">{item.user}</p>
@@ -128,7 +84,8 @@ const Testimonials = () => {
                                 </div>
                             </div>
 
-                         ); })}
+                            );
+                        })}
                     </div>
                 </div>
             </div>
