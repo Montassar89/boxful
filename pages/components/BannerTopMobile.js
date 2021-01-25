@@ -10,7 +10,7 @@ import {
 import IndicatorDots from './IndicatorDots'
 const BannerTopMobile = () => {
 	return (
-		<div className="banner-h-mobile w-full  relative mt-24 z-0" style={bannerHMobile}>
+		<div className="banner-h-mobile w-full  relative mt-24 z-0 block md:hidden" style={bannerHMobile}>
 
 			<Carousel loop auto widgets={[IndicatorDots]}>
 				<div className="flex flex-col items-center justify-between"

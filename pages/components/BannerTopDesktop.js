@@ -2,7 +2,7 @@ import React from 'react';
 
 const BannerTopDesktop = () => {
 	return (
-		<div class="home-banner-e-wrapper flex bg-white" style={{ height: '575px', paddingTop: '64px' }}>
+		<div class="home-banner-e-wrapper flex bg-white  hidden md:block" style={{ height: '575px', paddingTop: '64px' }}>
 			<div class="locker-bg bg-cover bg-no-repeat w-1/3"
 				style={{ background: 'url("https://www.boxful.com/images/cny2021/locker.jpg") no-repeat 100% 50%' }}></div>
 
