@@ -1,39 +1,40 @@
 import React from 'react';
 import Carousel from 're-carousel'
-import {
-	bannerHMobile, itemStyle,
-	itemStyleTow,
-	textStyle,
-	buttonOneStyle, buttonTowStyle
-} from './style'
+import 
+	styles
+ from './style.module.css'
 
 import IndicatorDots from './IndicatorDots'
 const BannerTopMobile = () => {
 	return (
-		<div className="banner-h-mobile w-full  relative mt-24 z-0 block md:hidden" style={bannerHMobile}>
+		<div  className={`${styles.bannerHMobile} banner-h-mobile w-full  relative mt-24 z-0 block md:hidden`}>
 
 			<Carousel loop auto widgets={[IndicatorDots]}>
-				<div className="flex flex-col items-center justify-between"
-					style={itemStyle}>
+				<div 
+					className={`${styles.itemStyle} flex flex-col items-center justify-between`}>
 
 					<div className="flex flex-col items-center">
-						<div className="text-center font-bold text-base w-5/6 mx-auto" style={textStyle}>Self-Storage and Door-to-Door Storage in Hong Kong</div>
+						<div  className={`text-center font-bold text-base w-5/6 mx-auto ${styles.textStyle}`}>Self-Storage and Door-to-Door Storage in Hong Kong</div>
 						<div className="cny-img"><img src="https://www.boxful.com/images/cny2021/locker_m_en.png?111" className="w-11/12 max-w-xs mx-auto mt-1" /></div>
 						<div className="cny-btn mt-1"><a href="/CNYpromotion-self-storage-lockers" target="_blank">
 							<img src="https://www.boxful.com/images/cny2021/btn_en.png" width="220" /></a></div>
 					</div>
 
 					<div className="flex flex-col items-center mb-8">
-						<a className="btn-locker flex bg-center bg-no-repeat font-bold text-base rounded-xl h-12" style={buttonOneStyle}
+						<a 
+						className={`${styles.buttonOneStyle} btn-locker flex bg-center bg-no-repeat font-bold text-base rounded-xl h-12`}
+						
 						>SELF-STORAGE</a>
 
 					</div>
 				</div>
-				<div className="flex flex-col items-center justify-between"
-					style={itemStyleTow}>
+				<div 
+					className={`${styles.itemStyleTow} flex flex-col items-center justify-between`}>
 
 					<div className="flex flex-col items-center">
-						<div className="text-center font-bold text-base w-5/6 mx-auto" style={textStyle}>Self-Storage and Door-to-Door Storage in Hong Kong</div>
+						<div 
+						className={`${styles.textStyle} text-center font-bold text-base w-5/6 mx-auto`}
+						>Self-Storage and Door-to-Door Storage in Hong Kong</div>
 						<div className="cny-img"><img src="https://www.boxful.com/images/cny2021/locker_m_en.png?111" className="w-11/12 max-w-xs mx-auto mt-1" /></div>
 						<div className="cny-btn mt-1"><a href="/CNYpromotion-self-storage-lockers" target="_blank">
 							<img src="https://www.boxful.com/images/cny2021/btn_en.png" width="220" /></a></div>
@@ -41,7 +42,8 @@ const BannerTopMobile = () => {
 
 					<div className="flex flex-col items-center mb-8">
 
-						<a className="btn-locker flex bg-center bg-no-repeat font-bold text-base rounded-xl h-12" style={buttonTowStyle}
+						<a   
+						className={`${styles.buttonTowStyle} btn-locker flex bg-center bg-no-repeat font-bold text-base rounded-xl h-12`}
 						>DOOR-TO-DOOR</a>
 
 					</div>
