@@ -10,8 +10,7 @@
     height: 100%
 }
 .itemStyleTow  {
-    background:
-    url(https://www.boxful.com/images/cny2021/valet-m1.jpg) no-repeat center bottom;
+    background:url(https://www.boxful.com/images/cny2021/valet-m1.jpg) no-repeat center bottom;
     height: 100%
 }
 .textStyle  {
@@ -41,27 +40,28 @@
     text-align: left;
 }
 .home-banner-e-wrapper{
-    height: '575px'; paddingTop: '64px'
+    height: 575px; 
+    padding-top: 64px
 }
 .locker-bg{
-    background: 'url(https://www.boxful.com/images/cny2021/locker.jpg) no-repeat 100% 50%'
+    background: url(https://www.boxful.com/images/cny2021/locker.jpg) no-repeat 100% 50%
 }
 .main-info{
-    max-width: '480px' 
+    max-width: 480px 
 }
 .cny-sol{
-    color: '#f27d80'
+    color: #f27d80
 }
 .link{
     background: url(https://www.boxful.com/images/cny2021/btn_en.png);
-    background-size: 'cover';
-    height: '47px';
-    width: '236px';
-    margin: '14px';
+    background-size: cover;
+    height: 47px;
+    width: 236px;
+    margin: 14px;
 }
 .hero-btn-wrap{
-    max-width: '400px'; 
-    margin: '13px auto 0'
+    max-width: 400px; 
+    margin: 13px auto 0
 }
 .btn-locker{
     width: 190px;
