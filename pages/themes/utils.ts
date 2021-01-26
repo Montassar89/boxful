@@ -39,6 +39,7 @@ export const applyTheme = (theme: string): void => {
   if (!themeObject) return;
   const root = document.documentElement;
 
+  
   Object.keys(themeObject).forEach((property) => {
     if (property === 'name') {
       return;

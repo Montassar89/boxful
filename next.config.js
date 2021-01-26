@@ -9,6 +9,8 @@
 
 
 module.exports = {
+  pageExtensions: ['mdx', 'jsx', 'js'],
+
   // Make sure that your node enviroment supports async/await
   exportPathMap: async function (defaultPathMap) {
   
