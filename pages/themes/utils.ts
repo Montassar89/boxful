@@ -25,12 +25,7 @@ export const mapTheme: (variables: ITheme) => IMappedTheme = (variables: ITheme)
   };
 };
 
-export const extend: (extending: ITheme, newTheme: ITheme) => ITheme = (
-  extending: ITheme,
-  newTheme: ITheme
-): ITheme => {
-  return { ...extending, ...newTheme };
-};
+
 
 /**
  * Helper function to set a new theme
@@ -51,4 +46,11 @@ export const applyTheme = (theme: string): void => {
 
     root.style.setProperty(property, themeObject[property]);
   });
+};
+
+export const extend: (extending: ITheme, newTheme: ITheme) => ITheme = (
+  extending: ITheme,
+  newTheme: ITheme
+): ITheme => {
+  return { ...extending, ...newTheme };
 };
