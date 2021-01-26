@@ -19,7 +19,7 @@ const BannerTopMobile = () => {
 
 					<div className="flex flex-col items-center mb-8">
 						<a 
-						className="buttonOneStyle btn-locker flex bg-center bg-no-repeat font-bold text-base rounded-xl h-12"
+						className="buttonOneStyle  flex bg-center bg-no-repeat font-bold text-base rounded-xl h-12"
 						
 						>SELF-STORAGE</a>
 
@@ -40,7 +40,7 @@ const BannerTopMobile = () => {
 					<div className="flex flex-col items-center mb-8">
 
 						<a   
-						className="buttonTowStyle btn-locker flex bg-center bg-no-repeat font-bold text-base rounded-xl h-12"
+						className="buttonTowStyle  flex bg-center bg-no-repeat font-bold text-base rounded-xl h-12"
 						>DOOR-TO-DOOR</a>
 
 					</div>

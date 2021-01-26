@@ -27,9 +27,9 @@ const BannerTopDesktop = () => {
 
 
 					</div>
-					<div className="hero-btn-wrap  flex-col lg-flex-row flex justify-between items-center mt-3">
+					<div className="hero-btn-wrap  flex-col lg:flex-row flex justify-between items-center">
 
-						<a className="btn-locker flex bg-center bg-no-repeat shadow-lg lg:m-0 mb-2"
+						<a className="bg-inverse-background btn-locker flex bg-center bg-no-repeat shadow-lg  mb-2"
 						>SELF-STORAGE</a>
 						<a className="btn-locker-2 flex bg-center bg-no-repeat shadow-lg"
 						>DOOR-TO-DOOR</a>
