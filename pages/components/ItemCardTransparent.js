@@ -2,9 +2,9 @@ import React from 'react';
 
 const ItemCardTransparent = ({ title }) => {
   return (
-    <div className="md:bg-transparent bg-white md:border-0 border w-full flex items-center p-2 rounded-xl">
+    <div className="md:bg-transparent bg-white md:border-0 border w-full flex flex-col lg:flex-row items-center p-2 rounded-xl">
 
-      <div className="flex-grow p-3">
+      <div className="flex-grow p-3 lg:text-left text-center">
         <div className="text-sm text-gray-500 ">
           In-Person Access
 
