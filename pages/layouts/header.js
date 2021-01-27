@@ -1,25 +1,32 @@
 import React, { useState } from "react";
-const  Header = () =>{
-  const [show, setShow] = useState(null);
-  const [profile, setProfile] = useState(false);
-  const [product, setProduct] = useState(false);
-  const [deliverables, setDeliverables] = useState(false);
-  const toggleDeliverables = () =>{
-    setDeliverables(!deliverables)
-    setProduct(false)
-  }
-  const toggleProduct = () =>{
-    setProduct(!product)
-    setDeliverables(false)
-  }
+import ChevronUpIcon from "./header/ChevronUpIcon";
+import ChevronDownIcon from "./header/ChevronDownIcon";
+import DropMenuItem from './header/DropMenuItem'
+import SimpleLink from './header/SimpleLink'
+
+const Header = () => {
+    const itemsOne = ['Hong Kong', 'Taipei', 'Seoul']
+    // const itemsOne = ['Hong Kong','Taipei,','Seoul']
+    const [show, setShow] = useState(null);
+    const [profile, setProfile] = useState(false);
+    const [product, setProduct] = useState(false);
+    const [deliverables, setDeliverables] = useState(false);
+    const toggleDeliverables = () => {
+        setDeliverables(!deliverables)
+        setProduct(false)
+    }
+    const toggleProduct = () => {
+        setProduct(!product)
+        setDeliverables(false)
+    }
     return (
         <>
             <div className="bg-gray-200 h-full w-full ">
-              
-            <nav className="bg-white hidden xl:block shadow fixed w-full z-10">
+
+                <nav className="bg-white hidden xl:block shadow fixed w-full z-10">
                     <div className="container mx-auto px-6 md:py-2 xl:py-0">
                         <div className="flex items-center justify-between">
-                        <div className="items-center md:pr-10 flex">
+                            <div className="items-center md:pr-10 flex">
                                 <svg aria-label="Home" className="w-12 h-12" id="logo" enableBackground="new 0 0 300 300" height={44} viewBox="0 0 300 300" width={43} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                                     <g>
                                         <path
@@ -38,51 +45,38 @@ const  Header = () =>{
                                         <a className="mx-5 flex items-center py-6 text-sm leading-5 text-indigo-700 hover:text-indigo-700 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out relative cursor-pointer" onMouseEnter={() => toggleProduct()} onMouseLeave={() => setProduct(false)}>
                                             Our Services
                                             <span className="pl-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width={16} height={16} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" />
-                                                    <polyline points="6 9 12 15 18 9" />
-                                                </svg>
+                                                <ChevronDownIcon />
                                             </span>
                                             {product && (
-                                              <ul className="bg-white shadow rounded mt-2 py-1 w-32 left-0 mt-40 -ml-4 absolute ">
-                                                    <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal">Hong Kong</li>
-                                                    <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal">Taipei</li>
-                                                    <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal">Seoul</li>
-                                                </ul>
+
+                                                <DropMenuItem items={itemsOne} />
                                             )}
                                         </a>
-                                       
+
 
                                         <a className="mx-5 flex items-center py-6 text-sm leading-5 text-indigo-700 hover:text-indigo-700 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out relative cursor-pointer" onMouseEnter={() => toggleDeliverables()} onMouseLeave={() => setDeliverables(false)}>
                                             Hong Kong
                                             <span className="pl-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width={16} height={16} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" />
-                                                    <polyline points="6 9 12 15 18 9" />
-                                                </svg>
+                                                <ChevronDownIcon />
                                             </span>
                                             {deliverables && (
-                                              <ul className="bg-white shadow rounded mt-2 py-1 w-32 left-0 mt-40 -ml-4 absolute ">
-                                                    <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal">Hong Kong</li>
-                                                    <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal">Taipei</li>
-                                                    <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal">Seoul</li>
-                                                </ul>
+                                                <DropMenuItem items={itemsOne} />
                                             )}
                                         </a>
-                                            <a className="mx-5 py-6 block text-sm leading-5 text-gray-800 hover:text-indigo-700 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out cursor-pointer">Login In</a>
-                                            <a className="mx-5 py-6 block text-sm leading-5 text-gray-800  hover:text-indigo-700 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out cursor-pointer">EN</a>
+                                        <a className="mx-5 py-6 block text-sm leading-5 text-gray-800 hover:text-indigo-700 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out cursor-pointer">Login In</a>
+                                        <a className="mx-5 py-6 block text-sm leading-5 text-gray-800  hover:text-indigo-700 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out cursor-pointer">EN</a>
                                         <a className="mx-5 py-6 block text-sm leading-5 text-primary-text  hover:text-indigo-700 focus:outline-none focus:text-indigo-700 transition duration-150 ease-in-out cursor-pointer">
                                             7458 5842
                                         </a>
                                         <a href="https://www.google.com/" className="flex items-center justify-center px-5 py-3 
                                         border border-transparent text-base font-medium rounded-full text-white bg-sec-background hover:bg-yellow-600 h-10 m-auto">
-                                          BOOK NOW
+                                            BOOK NOW
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                       
-                            
+
+
                         </div>
                     </div>
                 </nav>
@@ -104,13 +98,13 @@ const  Header = () =>{
                                 {show ? (
                                     ""
                                 ) : (
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-menu-2" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <line x1={4} y1={6} x2={20} y2={6} />
-                                        <line x1={4} y1={12} x2={20} y2={12} />
-                                        <line x1={4} y1={18} x2={20} y2={18} />
-                                    </svg>
-                                )}
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-menu-2" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <line x1={4} y1={6} x2={20} y2={6} />
+                                            <line x1={4} y1={12} x2={20} y2={12} />
+                                            <line x1={4} y1={18} x2={20} y2={18} />
+                                        </svg>
+                                    )}
                             </div>
                         </div>
                     </div>
@@ -144,7 +138,7 @@ const  Header = () =>{
                                             </div>
                                         </div>
                                         <ul className="f-m-m">
-                                        <a className="cursor-pointer">
+                                            <a className="cursor-pointer">
                                                 <li className="text-indigo-700 pt-8">
                                                     <div className="flex items-center justify-between">
                                                         <div className="flex items-center">
@@ -158,24 +152,18 @@ const  Header = () =>{
                                                         </div>
                                                         {product ? (
                                                             <div onClick={() => toggleProduct()} >
-                                                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-up" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                    <polyline points="6 15 12 9 18 15" />
-                                                                </svg>
+                                                                <ChevronUpIcon />
                                                             </div>
                                                         ) : (
-                                                            <div onClick={() => toggleProduct()}>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                    <polyline points="6 9 12 15 18 9" />
-                                                                </svg>
-                                                            </div>
-                                                        )}
+                                                                <div onClick={() => toggleProduct()}>
+                                                                    <ChevronDownIcon />
+                                                                </div>
+                                                            )}
                                                     </div>
                                                     {product && (
                                                         <div>
                                                             <ul className="my-3">
-                                                                <li className="xl:text-base md:text-2xl text-base text-indigo-500 hover:text-white py-2 px-6">Hong Kong</li>
+                                                                <li className="text-gray-800xl:text-base md:text-2xl text-base text-indigo-500 hover:text-white py-2 px-6">Hong Kong</li>
                                                                 <li className="text-gray-800 xl:text-base md:text-2xl text-base hover:text-indigo-500 py-2 px-6">Taipei</li>
                                                                 <li className="text-gray-800 xl:text-base md:text-2xl text-base hover:text-indigo-500 py-2 px-6">Seoul</li>
                                                             </ul>
@@ -183,7 +171,7 @@ const  Header = () =>{
                                                     )}
                                                 </li>
                                             </a>
-                                             <a className="cursor-pointer">
+                                            <a className="cursor-pointer">
                                                 <li className="text-indigo-700 pt-8">
                                                     <div className="flex items-center justify-between">
                                                         <div className="flex items-center">
@@ -198,19 +186,13 @@ const  Header = () =>{
                                                         </div>
                                                         {deliverables ? (
                                                             <div onClick={() => toggleDeliverables()}>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-up" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                    <polyline points="6 15 12 9 18 15" />
-                                                                </svg>
+                                                                <ChevronUpIcon />
                                                             </div>
                                                         ) : (
-                                                            <div onClick={() => toggleDeliverables()}>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width={24} height={24} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                                                    <polyline points="6 9 12 15 18 9" />
-                                                                </svg>
-                                                            </div>
-                                                        )}
+                                                                <div onClick={() => toggleDeliverables()}>
+                                                                    <ChevronDownIcon />
+                                                                </div>
+                                                            )}
                                                     </div>
                                                     {deliverables && (
                                                         <div>
@@ -223,55 +205,12 @@ const  Header = () =>{
                                                     )}
                                                 </li>
                                             </a>
-                                            <a className="cursor-pointer">
-                                                <li className="text-gray-800 pt-10">
-                                                    <div className="flex items-center">
-                                                        <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-grid" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" />
-                                                                <rect x={4} y={4} width={6} height={6} rx={1} />
-                                                                <rect x={14} y={4} width={6} height={6} rx={1} />
-                                                                <rect x={4} y={14} width={6} height={6} rx={1} />
-                                                                <rect x={14} y={14} width={6} height={6} rx={1} />
-                                                            </svg>
-                                                        </div>
-                                                        <p className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">Log In</p>
-                                                    </div>
-                                                </li>
-                                            </a>
-                                            <a className="cursor-pointer">
-                                                <li className="text-gray-800 pt-10">
-                                                    <div className="flex items-center">
-                                                        <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-grid" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" />
-                                                                <rect x={4} y={4} width={6} height={6} rx={1} />
-                                                                <rect x={14} y={4} width={6} height={6} rx={1} />
-                                                                <rect x={4} y={14} width={6} height={6} rx={1} />
-                                                                <rect x={14} y={14} width={6} height={6} rx={1} />
-                                                            </svg>
-                                                        </div>
-                                                        <p className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">EN</p>
-                                                    </div>
-                                                </li>
-                                            </a>
-                                            <a className="cursor-pointer">
-                                                <li className="text-gray-800 pt-10">
-                                                    <div className="flex items-center">
-                                                        <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-grid" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" />
-                                                                <rect x={4} y={4} width={6} height={6} rx={1} />
-                                                                <rect x={14} y={4} width={6} height={6} rx={1} />
-                                                                <rect x={4} y={14} width={6} height={6} rx={1} />
-                                                                <rect x={14} y={14} width={6} height={6} rx={1} />
-                                                            </svg>
-                                                        </div>
-                                                        <p className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">7584 3652</p>
-                                                    </div>
-                                                </li>
-                                            </a>
-                                         
+
+
+                                            <SimpleLink text={'Log In'} />
+                                            <SimpleLink text={'EN'} />
+                                            <SimpleLink text={'5454 5412'} />
+
                                         </ul>
                                     </div>
                                 </div>
@@ -279,8 +218,6 @@ const  Header = () =>{
                         </div>
                     </div>
                 </nav>
-                {/* Sidebar ends */}
-                {/* Code block ends */}
             </div>
         </>
     );
