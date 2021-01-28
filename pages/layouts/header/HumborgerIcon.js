@@ -1,8 +1,8 @@
-const ChevronDownIcon = () => {
+const HumborgerIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="icon icon-tabler icon-tabler-chevron-down"
+      className="icon icon-tabler icon-tabler-menu-2"
       width={24}
       height={24}
       viewBox="0 0 24 24"
@@ -13,8 +13,11 @@ const ChevronDownIcon = () => {
       strokeLinejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <polyline points="6 9 12 15 18 9" />
+      <line x1={4} y1={6} x2={20} y2={6} />
+      <line x1={4} y1={12} x2={20} y2={12} />
+      <line x1={4} y1={18} x2={20} y2={18} />
     </svg>
   );
 };
-export default ChevronDownIcon;
+
+export default HumborgerIcon;

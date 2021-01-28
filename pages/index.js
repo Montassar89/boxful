@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import Banner from './components/banner';
-import Testimonials from './components/testimonials';
-import ContactRow from './components/contact';
+import Banner from "./components/banner";
+import Testimonials from "./components/testimonials";
+import ContactRow from "./components/contact";
 
 export default function Home() {
   return (
@@ -11,5 +11,5 @@ export default function Home() {
       <Testimonials />
       <ContactRow />
     </div>
-  )
+  );
 }
