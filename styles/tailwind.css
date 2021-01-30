@@ -113,3 +113,28 @@
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.bg-yellow-main{
+    background-color: #fef9e5;
+}
+.bg-grey-main{
+    background-color: #fafafa;
+}
+.bg-yellow-main-btn{
+    background-color: #fef5d8;
+}
+.bg-yellow-sec-btn{
+    background-color: #f8d340;
+}
+.bg-grey-main-btn{
+    background-color: #f3f3f3;
+}
+.bg-green-sec{
+    background-color: #d3ebea;
+}
+.bg-green-main{
+    background-color: #e9f8f7;
+}
+.main-color{
+    color: #00c4b3;
+}

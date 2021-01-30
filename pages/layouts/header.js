@@ -8,8 +8,23 @@ import HumborgerIcon from "./header/HumborgerIcon";
 import CloseIcon from "./header/CloseIcon";
 import OurServicesIcon from "./header/OurServicesIcon";
 import HongIcon from "./header/HongIcon";
+import styled from "styled-components";
+const ModalContent = styled.div`
+  margin: 10px;
+`;
+import Modal from "./header/Modal";
+import OpenModalButton from "./header/OpenModalButton";
+import CardOneModal from "./header/CardOneModal";
+import CardTowModal from "./header/CardTowModal";
+import CardThreeModal from "./header/CardThreeModal";
 
 const Header = () => {
+  const [isOpen, toggle] = useState(false);
+
+  const handlOpenModal = (open) => {
+    console.log("close modal");
+    toggle(open);
+  };
   const [show, setShow] = useState(null);
   const [product, setProduct] = useState(false);
   const [deliverables, setDeliverables] = useState(false);
@@ -86,11 +101,27 @@ const Header = () => {
           <div className="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fixed top-0 z-10">
             <div className="w-40 flex items-center">
               <LogoIcon />
+              
               <p className="text-base text-gray-800 ml-3 font-extrabold">
                 BOXFUL
               </p>
             </div>
-            <div>
+            <div className="flex items-center">
+            <div className="">
+                <OpenModalButton handlClick={() => handlOpenModal(true)} >
+                  Our Services
+                </OpenModalButton>
+                <Modal
+                  isOpen={isOpen}
+                  handleClose={() => handlOpenModal(false)}
+                >
+                  <ModalContent>
+                    <CardOneModal />
+                    <CardTowModal />
+                    <CardThreeModal />
+                  </ModalContent>
+                </Modal>
+              </div>
               <div
                 id="menu"
                 className="text-gray-800"
@@ -98,6 +129,7 @@ const Header = () => {
               >
                 {show ? "" : <HumborgerIcon />}
               </div>
+
             </div>
           </div>
           {/*Mobile responsive sidebar*/}
