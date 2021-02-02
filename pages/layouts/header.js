@@ -8,10 +8,7 @@ import HumborgerIcon from "./header/HumborgerIcon";
 import CloseIcon from "./header/CloseIcon";
 import OurServicesIcon from "./header/OurServicesIcon";
 import HongIcon from "./header/HongIcon";
-import styled from "styled-components";
-const ModalContent = styled.div`
-  margin: 10px;
-`;
+
 import Modal from "./header/Modal";
 import OpenModalButton from "./header/OpenModalButton";
 import CardOneModal from "./header/CardOneModal";
@@ -115,11 +112,11 @@ const Header = () => {
                   isOpen={isOpen}
                   handleClose={() => handlOpenModal(false)}
                 >
-                  <ModalContent>
+                  <div className="m-4">
                     <CardOneModal />
                     <CardTowModal />
                     <CardThreeModal />
-                  </ModalContent>
+                  </div>
                 </Modal>
               </div>
               <div
